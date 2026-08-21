@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <!-- Vinculando o arquivo CSS externo requisitado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <header>
+        <div class="logo">
+            <h1>Agência Criativa Web</h1>
+        </div>
+        <div class="menu--nav">
+        <nav>
+            <ul>
+                <li><a href="#sobre" class="elemento__nav--active">Sobre Nós</a></li>
+                <li><a href="#servicos" class="elemento__nav--active">Serviços</a></li>
+                <li><a href="#depoimentos" class="elemento__nav--active">Depoimentos</a></li>
+                <li><a href="#contato" class="elemento__nav--active">Contato</a></li>
+                <li><a href="#form" class="elemento__nav--active">Formulário</a></li>
+            </ul>
+        </nav>
+        </div>
+        </header>
+
+    <!-- Seção Home -->
+     <div class="banner">
+        <section>
+        <div class="conteudo__banner">
+            <h1>Bem-vindo à Agência Criativa Web</h1>
+            <p class="p__descricao--banner">Transformamos suas ideias em experiências digitais incríveis e totalmente modernas.</p>
+            <a href="#contato" class="botao">Fale Conosco</a>
+        </div>
+    </section>
+     </div>
+
+    <!-- Seção Sobre Nós -->
+     <div class="sobre__nos">
+         <section>
+        <h2>Sobre Nós</h2>
+        <p>Somos uma agência focada em design digital e desenvolvimento web. Nosso principal diferencial é alinhar a criatividade com a técnica para entregar projetos que geram resultados reais para nossos clientes. Nossos valores são a inovação, transparência e o foco total na experiência do usuário.</p>
+    </section>
+     </div>
+
+     <!-- Seção Serviços (Estruturada com CSS Grid) -->
+    <br>
+     <div class="container">
+        <section id="servicos" class="secao secao--fundo-alternativo">
+            <h2 class="titulo-secao">Nossos Serviços</h2>
+        <div class="grid__servicos">
+                <article class="card card--servico">
+                    <h3 class="card--servico__titulo">Design Gráfico</h3>
+                <p>Criação de identidades visuais marcantes, logotipos e materiais digitais personalizados.</p>
+                </article>
+            
+            <br>
+            <article class="card card--servico">
+                <h3 class="card--servico__titulo">Desenvolvimento Web</h3>
+                <p>Criação de sites modernos, rápidos e totalmente responsivos para todos os dispositivos.</p>
+            </article>
+           
+            <article class="card card--servico">
+                <h3 class="card--servico__titulo">Branding</h3>
+                <p>Posicionamento de marca para fazer sua empresa se destacar no mercado digital.</p>
+            </article>
+        </div>
+        </div>
+    </section>
+     </div>
+     <br>
+    <!-- Seção Depoimentos -->
+        <section id="depoimentos" class="secao secao--fundo-claro">
+            <div class="container">
+                 <h2 class="titulo-secao">Relato de um Grande CEO e uma especialista em direção de marketing!</h2>
+       <br>
+                 <div class="container__depoimentos">
+            <article class="card__depoimento">
+                <p>"O site da minha empresa ficou perfeito! Superou todas as expectativas."</p>
+                <span class="card--depoimento__autor">- Carlos Silva, CEO da TechInova</span>
+            </article>
+            <div class="card__depoimento">
+                <p>"Equipe muito profissional. Entregaram o projeto de branding antes do prazo!"</p>
+                <span class="card--depoimento__autor">- Mariana Costa, Diretora de Marketing</span>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- Seção Contato -->
+        <section id="contato" class="secao secao--fundo-alternativo">
+              <div class="container">
+                <h2 class="titulo-secao">Contato</h2>
+        <div class="container__contato">
+            <class class="info__contato">
+                <h3 class="contato__info-titulo">Informações</h3>
+                <p class="contato__info-item"><strong>Endereço:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+                <p class="contato__info-item"><strong>Telefone:</strong> (11) 98899-6503</p>
+                <p class="contato__info-item"><strong>E-mail:</strong> jconceicaogabriel@gmail.com</p>
+                
+                <!-- Imagem Responsiva usando Srcset -->
+                <img src="img/escritorio.jpg" 
+                     srcset="img/escritorio.jpg 568w, img/escritorio.jpg 768w, img/escritorio.jpg 1440w" 
+                     sizes="(max-width: 576px) 100vw, 50vw"
+                     alt="Imagem da nossa agência" 
+                     class="img--responsiva">
+            </class>
+             
+            <!-- Formulário -->
+            <form class="formulario__contato" id="form" action="#" method="post">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" class="campo__input" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail profissional" class="campo__input" required>
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos te ajudar?" class="campo__textarea" required></textarea>
+                </div>
+                <button type="submit" class="botao botao--enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- Rodapé básico -->
+    <footer class="rodape">
+        <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
