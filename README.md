@@ -1,0 +1,1 @@
+Agência criativa web, é um projeto particular desenvolvimento por mim, para aplicar conhecimento em HTML, CSS utilizando métodos, como: Media Queries para imagem se tornar compativel e diversos tipos de dispositivos, método BEM, para mautenção futura se tornar mais fácil.
