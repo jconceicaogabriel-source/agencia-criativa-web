@@ -1,0 +1,371 @@
+/*
+   1. Reset e configurações globais
+   2. Componentes reutilizáveis (usados em mais de uma seção)
+   3. Cabeçalho (header / navegação)
+   4. Seção Home / Banner
+   5. Seção Sobre Nós
+   6. Seção Serviços
+   7. Seção Depoimentos
+   8. Seção Contato
+   9. Rodapé
+   10. Responsividade (media queries)
+
+   1. RESET E CONFIGURAÇÕES GLOBAIS
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+
+/* 2. COMPONENTES REUTILIZÁVEIS
+
+/* Container central — usado em Serviços, Depoimentos e Contato */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fundos alternados de seção — usados em Serviços, Depoimentos e Contato */
+.secao--fundo-claro {
+    background-color: #ffffff;
+}
+
+.secao--fundo-alternativo {
+    background-color: #f4f6f7;
+}
+
+/* Título padrão de seção — usado em Serviços, Depoimentos e Contato */
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+/* Botão — usado no Banner ("Fale Conosco") e no Formulário ("Enviar") */
+.botao {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.8rem 2rem;
+    background-color: #8e44ad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.botao:hover {
+    background-color: blueviolet;
+}
+
+.botao--enviar {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2c3e50;
+}
+
+.botao--enviar:hover {
+    background-color: #127ee2;
+}
+
+/* Card base — usado nos cards de Serviços */
+.card {
+    background-color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(146, 124, 124, 0.11);
+}
+
+/* Imagem responsiva — usada no bloco de Contato */
+.img--responsiva {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+
+
+/*3. CABEÇALHO (HEADER / NAVEGAÇÃO)*/
+.cabecalho {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cabecalho__logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #8e44ad;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.logo {
+    color: #8e44ad;
+}
+
+.titulo--destaque {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.letra__destaque--titulo {
+    color: blueviolet;
+}
+
+/* Navegação */
+.menu--nav {
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+}
+
+.elemento__nav--active {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.elemento__nav--active:hover {
+    color: #8e44ad;
+}
+
+
+/* 4. SEÇÃO HOME / BANNER*/
+.banner {
+    background: linear-gradient(rgba(142, 68, 173, 0.1), rgba(44, 62, 80, 0.2)), #f4f6f7;
+    min-height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.conteudo__banner {
+    max-width: 700px;
+}
+
+.titulo__banner {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: #2c3e50;
+}
+
+.p__descricao--banner {
+    margin-top: 1.4rem;
+}
+
+/* 5. SEÇÃO SOBRE NÓS */
+.sobre__nos {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1rem;
+}
+
+/* 6. SEÇÃO SERVIÇOS*/
+
+.grid__servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card--servico {
+    width: 500px;
+    margin-left: 50vh;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card--servico__titulo {
+    margin-bottom: 1rem;
+    color: #8e44ad;
+}
+
+
+/* 7. SEÇÃO DEPOIMENTOS */
+.card__depoimento {
+    margin-bottom: 4vh;
+}
+
+.container__depoimentos {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card__depoimento {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-left: 5px solid blueviolet;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.card--depoimento__autor {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+
+/* 8. SEÇÃO CONTATO */
+
+.container__contato {
+    display: flex;
+    gap: 3rem;
+}
+
+.info__contato {
+    flex: 1;
+}
+
+.contato__info-titulo {
+    margin-bottom: 1rem;
+}
+
+.contato__info-item {
+    margin-bottom: 0.8rem;
+}
+
+.formulario__contato {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Campos do formulário */
+.campo {
+    margin-bottom: 1.6rem;
+}
+
+.campo__label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 50px;
+}
+
+
+.campo__input {
+    width: 600px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo__textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+
+/* 9. RODAPÉ */
+.rodape {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.875rem;
+}
+
+
+/* 10. RESPONSIVIDADE (MEDIA QUERIES) */
+@media (max-width: 768px) {
+    /* Cabeçalho e menu */
+    .cabecalho {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Tipografia */
+    .banner__titulo {
+        font-size: 1.5rem;
+    }
+
+    .banner__descricao {
+        font-size: 1rem;
+    }
+
+    .destaque--titulo {
+        font-size: 2rem;
+    }
+
+    .titulo-secao {
+        font-size: 2rem;
+    }
+
+    .sobre__texto {
+        font-size: 1rem;
+    }
+
+    /* Grid e flex */
+    .servicos__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos__container {
+        flex-direction: column;
+    }
+
+    .contato__container {
+        flex-direction: column;
+    }
+
+    /* Seções */
+    .secao {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        min-height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .menu__lista {
+        gap: 0.5rem;
+    }
+
+    .card {
+        padding: 2rem 1rem;
+    }
+}
