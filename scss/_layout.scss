@@ -1,0 +1,179 @@
+@use 'sass:math';
+@use 'variaveis' as v;
+@use 'mixins' as m;
+
+// CABEÇALHO (HEADER / NAVEGAÇÃO)
+.cabecalho {
+  background-color: v.$cor-branco;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  @include m.sombra(v.$cor-sombra);
+  z-index: 1000;
+
+  &__logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: v.$cor-primaria;
+    font-family: v.$fonte-logo;
+  }
+}
+
+.logo {
+  color: v.$cor-primaria;
+}
+
+.titulo--destaque {
+  font-family: v.$fonte-destaque;
+}
+
+.letra__destaque--titulo {
+  color: v.$cor-primaria-hover;
+}
+
+// Navegação
+.menu {
+  &--nav {
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+  }
+
+  &__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$espacamento-pequeno;
+  }
+}
+
+.elemento__nav--active {
+  text-decoration: none;
+  color: v.$cor-primaria-hover;
+
+  &:hover {
+    color: v.$cor-primaria;
+  }
+}
+
+// SEÇÃO HOME / BANNER
+.banner {
+  background: linear-gradient(rgba(142, 68, 173, 0.1), rgba(44, 62, 80, 0.2)), v.$cor-fundo-alternativo;
+  min-height: 50vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: v.$espacamento-base 1rem;
+
+  &__titulo {
+    font-size: 1.5rem;
+  }
+
+  &__descricao {
+    font-size: 1rem;
+  }
+}
+
+.conteudo__banner {
+  max-width: 700px;
+}
+
+.titulo__banner {
+  font-size: 2rem;
+  margin-bottom: v.$espacamento-grande;
+  color: v.$cor-secundaria;
+}
+
+.p__descricao--banner {
+  // operador: metade de $espacamento-padrao (2.8rem / 2 = 1.4rem)
+  margin-top: math.div(v.$espacamento-padrao, 2);
+}
+
+// SEÇÃO SOBRE NÓS
+.sobre {
+  &__nos {
+    font-family: v.$fonte-sobre;
+    font-size: 1.1rem;
+  }
+
+  &__texto {
+    font-size: 1rem;
+  }
+}
+
+// SEÇÃO SERVIÇOS
+.grid__servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: v.$espacamento-base;
+}
+
+.card--servico {
+  @include m.flex-center(column);
+  text-align: center;
+
+  &__titulo {
+    margin-bottom: v.$espacamento-pequeno;
+    color: v.$cor-primaria;
+  }
+}
+
+// SEÇÃO DEPOIMENTOS
+.container__depoimentos {
+  display: flex;
+  justify-content: space-around;
+  gap: v.$espacamento-base;
+}
+
+.card__depoimento {
+  margin-bottom: 4vh;
+  background-color: v.$cor-fundo;
+  padding: v.$espacamento-base;
+  border-left: 5px solid v.$cor-primaria-hover;
+  border-radius: v.$radius-pequeno;
+  text-align: left;
+}
+
+.card--depoimento__autor {
+  display: block;
+  margin-top: v.$espacamento-pequeno;
+  font-weight: bold;
+  color: v.$cor-primaria-hover;
+}
+
+// SEÇÃO CONTATO
+.container__contato {
+  display: flex;
+  gap: 3rem;
+}
+
+.info__contato {
+  flex: 1;
+}
+
+.contato__info-titulo {
+  margin-bottom: v.$espacamento-pequeno;
+}
+
+.contato__info-item {
+  margin-bottom: 0.8rem;
+}
+
+.formulario__contato {
+  flex: 2;
+  background-color: v.$cor-branco;
+  padding: v.$espacamento-base;
+  border-radius: v.$radius-card;
+  @include m.sombra(v.$cor-sombra-form);
+}
+
+// RODAPÉ
+.rodape {
+  background-color: v.$cor-secundaria;
+  color: v.$cor-branco;
+  text-align: center;
+  padding: v.$espacamento-base;
+  font-size: 0.875rem;
+}

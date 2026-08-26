@@ -1,0 +1,71 @@
+@use 'variaveis' as v;
+// RESPONSIVIDADE (MEDIA QUERIES)
+
+@media (max-width: v.$breakpoint-tablet) {
+  // Cabeçalho e menu
+  .cabecalho {
+    flex-direction: column;
+    gap: v.$espacamento-pequeno;
+  }
+
+  .menu__lista {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$espacamento-pequeno;
+  }
+
+  // Tipografia
+  .titulo__banner {
+    font-size: 1.5rem;
+  }
+
+  .p__descricao--banner {
+    font-size: 1rem;
+  }
+
+  .titulo--destaque {
+    font-size: 2rem;
+  }
+
+  .titulo-secao {
+    font-size: 2rem;
+  }
+
+  .sobre__nos {
+    font-size: 1rem;
+  }
+
+  // Grid e flex
+  .grid__servicos {
+    grid-template-columns: 1fr;
+  }
+
+  .container__depoimentos {
+    flex-direction: column;
+  }
+
+  .container__contato {
+    flex-direction: column;
+  }
+
+  // Seções
+  .secao--fundo-claro,
+  .secao--fundo-alternativo {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .banner {
+    min-height: auto;
+    padding: 5rem 1rem;
+  }
+
+  .menu__lista {
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 2rem 1rem;
+  }
+}

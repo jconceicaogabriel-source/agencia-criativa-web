@@ -1,0 +1,15 @@
+@use 'variaveis' as v;
+
+// RESET E CONFIGURAÇÕES GLOBAIS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$fonte-principal;
+  line-height: 1.6;
+  color: v.$cor-texto;
+  background-color: v.$cor-fundo;
+}

@@ -1,0 +1,38 @@
+// Cores
+$cor-primaria: #8e44ad;
+$cor-primaria-hover: blueviolet;
+$cor-secundaria: #2c3e50;
+$cor-texto: #333333;
+$cor-fundo: #f9f9f9;
+$cor-fundo-alternativo: #f4f6f7;
+$cor-branco: #ffffff;
+$cor-borda: #cccccc;
+$cor-sombra: rgba(0, 0, 0, 0.1);
+$cor-sombra-card: rgba(146, 124, 124, 0.11);
+$cor-sombra-form: rgba(0, 0, 0, 0.05);
+
+// Fontes
+$fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$fonte-logo: 'Brush Script MT', cursive;
+$fonte-destaque: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$fonte-sobre: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+// Espaçamentos
+$espacamento-pequeno: 1rem;
+$espacamento-base: 2rem;
+$espacamento-grande: 4rem;
+$espacamento-padrao: 2.8rem; // base p/ cálculo -> metade = 1.4rem
+$espacamento-unidade: 0.75rem; // base p/ cálculo -> x2 = 1.5rem
+
+// Bordas e raios
+$radius-padrao: 5px;
+$radius-card: 8px;
+$radius-pequeno: 3px;
+$radius-input: 4px;
+
+// Transições
+$transicao-padrao: 0.3s;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;

@@ -1,0 +1,100 @@
+@use 'sass:math';
+@use 'variaveis' as v;
+@use 'mixins' as m;
+
+// Container central — usado em Serviços, Depoimentos e Contato
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Fundos alternados de seção
+.secao {
+  &--fundo-claro {
+    background-color: v.$cor-branco;
+  }
+
+  &--fundo-alternativo {
+    background-color: v.$cor-fundo-alternativo;
+  }
+}
+
+// Título padrão de seção
+.titulo-secao {
+  text-align: center;
+  margin-bottom: v.$espacamento-base;
+  font-size: 2.2rem;
+  color: v.$cor-secundaria;
+}
+
+// Botão
+.botao {
+  @include m.botao-base();
+  // operador: metade de $espacamento-padrao (2.8rem / 2 = 1.4rem)
+  margin-top: math.div(v.$espacamento-padrao, 2);
+
+  &:hover {
+    background-color: v.$cor-primaria-hover;
+  }
+
+  &--enviar {
+    width: 100%;
+    padding: v.$espacamento-pequeno;
+    background-color: v.$cor-secundaria;
+
+    &:hover {
+      background-color: #127ee2;
+    }
+  }
+}
+
+// Card base — usado nos cards de Serviços
+.card {
+  background-color: v.$cor-branco;
+  padding: 2.5rem 1.5rem;
+  border-radius: v.$radius-card;
+  text-align: center;
+  @include m.sombra(v.$cor-sombra-card);
+}
+
+// Imagem responsiva — usada no bloco de Contato
+.img--responsiva {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  // operador: $espacamento-unidade x 2 = 1.5rem
+  margin-top: v.$espacamento-unidade * 2;
+  border-radius: v.$radius-padrao;
+}
+
+// Campos do formulário
+.campo {
+  margin-bottom: 1.6rem;
+
+  &__label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid v.$cor-borda;
+    border-radius: v.$radius-input;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid v.$cor-borda;
+    border-radius: v.$radius-input;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+  }
+}

@@ -1,0 +1,30 @@
+@use 'variaveis' as v;
+
+// Centraliza itens com flexbox (usado em cards e componentes)
+@mixin flex-center($direcao: row, $gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direcao;
+}
+
+// Estilo base reutilizável para botões
+@mixin botao-base($fundo: v.$cor-primaria, $cor: #fff) {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: $fundo;
+  color: $cor;
+  text-decoration: none;
+  border-radius: v.$radius-padrao;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background v.$transicao-padrao;
+}
+
+// Sombra padrão de cards/seções
+@mixin sombra($cor: v.$cor-sombra) {
+  box-shadow: 0 4px 6px $cor;
+}
